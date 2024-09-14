@@ -1,16 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --nav-height: 70px;
+  --bg-clr: #f0f8f7;
+  --heading-clr: #085f63;
+  --paragraph-clr: #555f61;
+  --primary-accent: #29a19c;
+  --secondary-accent: #c1e1c1;
+  --text-color: #ffffff;
+  --border-color: #d1d1d1;
+  --highlight-color: #f0f8f7;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
 body {
   margin: 0;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-clr);
+}
+
+a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: rgb(233, 219, 20);
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-clr);
+}
+
+p {
+  color: var(--paragraph-clr);
+  font-size: 0.8rem;
+}
+
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  padding-inline: 20px;
+  background-color: var(--bg-clr);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-name a {
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--heading-clr);
+  text-transform: uppercase;
+}
+
+.menu {
+  cursor: pointer;
+  border-radius: 2px;
+  display: block;
+  font-size: 1.5rem;
+  color: var(--highlight-color);
+  background-color: var(--primary-accent);
+  border: none;
+}
+
+.cta-btn {
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--primary-accent);
+  padding: 8px 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#nav-container .cta-btn {
+  display: none;
+}
+
+.nav-links-container {
+  position: fixed;
+  top: var(--nav-height);
+  right: -100%;
+  height: calc(100vh - var(--nav-height));
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  transition: right 0.3s ease, opacity 0.35s ease, visibility 0.35s;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+  padding: 30px 30px;
+}
+
+.nav-links > li {
+  padding-bottom: 10px;
+
+  text-align: center;
+  border-bottom: 1px solid var(--text-color);
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--text-color);
+}
+.nav-links a:hover {
+  color: var(--primary-accent);
+}
+
+.nav-links-container.visible {
+  visibility: visible;
+  right: 0;
+  opacity: 1;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  opacity: 0.65;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(87, 44, 87, 0.9);
+}
+
+#hero {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  min-height: 60vh;
+  background: url("assets/pexels-shkrabaanthony-6599017.jpg") center/cover
+    no-repeat;
+  background-color: #daf0e9;
+}
+
+.hero-content {
+  width: 100%;
+  z-index: 3;
+}
+
+.hero-content h1 {
+  padding-top: 60px;
+  max-width: 350px;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  color: var(--highlight-color);
+}
+
+.hero-content p {
+  max-width: 400px;
+  margin: 0 auto 20px;
+  font-size: 0.7rem;
+  color: var(--text-color);
+}
+
+.heading-special {
+  color: var(--highlight-color);
+}
+
+#features {
+  background-color: #eef5f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#feature-grid {
+  max-width: 500px;
+  display: grid;
+  margin: 0 auto 50px;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding-inline: 10px;
+}
+
+.feature {
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 15px 20px 25px;
+  border: 1px solid var(--border-color);
+}
+
+#features h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+#pricing-plans {
+  padding: 70px 15px;
+  background-color: var(--secondary-accent);
+  min-height: 100vh;
+}
+
+#pricing-plans > p {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.pricing-grid {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  margin: 60px auto 0;
+}
+
+#pricing-plans > h2 {
+  text-align: center;
+}
+.price-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+
+.price-card a {
+  padding-block: 10px;
+  background-color: var(--primary-accent);
+  color: var(--text-color);
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.price-header h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.price-card li {
+  margin-bottom: 10px;
+}
+
+.price-card li::before {
+  content: "\2713";
+  border-radius: 50%;
+  color: var(--primary-accent);
+}
+
+#footer {
+  background-color: var(--heading-clr);
+  padding: 15px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer p,
+#footer ul {
+  color: var(--text-color);
+}
+
+#footer ul {
+  display: flex;
+  gap: 30px;
+}
+
+@media (min-width: 850px) {
+  #hero {
+    min-height: 100vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  #nav-container .cta-btn {
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 27, 36, 1) 0%,
+      rgba(31, 155, 171, 1) 35%,
+      rgba(0, 146, 255, 1) 100%
+    );
+  }
+
+  .nav-links-container {
+    position: static;
+    width: max-content;
+    padding-top: 0;
+    height: auto;
+    background-color: transparent;
+  }
+
+  .nav-links {
+    padding: 0;
+    flex-direction: row;
+    gap: 50px;
+    height: auto;
+  }
+
+  .nav-links > li {
+    color: var(--heading-clr);
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 0;
+    font-size: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .nav-links a {
+    color: rgba(8, 94, 99, 0.568);
+  }
+  .nav-links a:hover {
+    color: var(--primary-accent);
+  }
+
+  #cta-btn {
+    display: block;
+  }
+  .pricing-grid,
+  #feature-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  #feature-grid {
+    max-width: 100%;
+  }
+
+  .pricing-grid {
+    max-width: 900px;
+  }
 }

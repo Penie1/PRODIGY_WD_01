@@ -4,139 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FitLife Coach</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <nav id="nav-container">
       <div class="brand-name">
-        <a href="#">FitLife</a>
+        <a href="#"><em>Fit-Life</em></a>
       </div>
-      <ul class="nav-links">
-        <li>
-          <a href="#">Features</a>
-        </li>
+      <div class="nav-links-container" aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing-plans">Pricing Plans</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
 
-        <li>
-          <a href="#">Pricing Plans</a>
-        </li>
-        <li>
-          <a href="#">Contact Us</a>
-        </li>
-      </ul>
-      <div id="cta-button">
-        <a href="#" class="cta-button">Get Started</a>
+      <div>
+        <a href="#get-started" class="cta-btn">Get Started</a>
       </div>
+
+      <button class="menu" aria-label="Open menu">
+        <i class="fa fa-bars"></i>
+      </button>
     </nav>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Transform Your Body, Transform Your Life</h1>
+    <main>
+      <section id="hero" role="banner">
+        <div class="backdrop"></div>
+        <div class="hero-content">
+          <h1>
+            Transform Your <span class="highlight">Body</span>, Transform Your
+            <span class="highlight">Life</span>
+          </h1>
+          <p>
+            Join thousands who've achieved their fitness goals with personalized
+            coaching.
+          </p>
+          <a href="#get-started" class="cta-btn">Get Started</a>
+        </div>
+      </section>
+
+      <section id="features">
+        <h2>Key Features</h2>
+        <div id="feature-grid">
+          <div class="feature">
+            <h3>Personalized Workouts</h3>
+            <p>
+              Tailored exercises designed for your specific fitness goals and
+              levels.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Nutrition Plans</h3>
+            <p>
+              Customized meal plans to complement your workouts and boost your
+              results.
+            </p>
+          </div>
+          <div class="feature">
+            <h3>Community Support</h3>
+            <p>
+              Be part of a community where you can find encouragement and tips.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing-plans">
+        <h2>Pricing Plans</h2>
         <p>
-          Join thousands who've achieved their fitness goals with personalized
-          coaching.
+          Choose the perfect plan for your fitness journey, whether you're just
+          starting or seeking elite coaching.
         </p>
-        <a href="#" class="cta-button">Get Started Now</a>
-      </div>
-    </section>
-    <section id="features">
-      <h2>Key Features</h2>
-      <div id="feature-grid">
-        <div class="feature">
-          <h3>Personalized Workouts</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            excepturi tempora perspiciatis nisi autem obcaecati, dicta repellat
-            quidem delectus exercitationem voluptates saepe repellendus ad omnis
-            officiis laboriosam amet impedit necessitatibus.
-          </p>
+
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Basic Plan</h3>
+              <p>Access to workout videos and community forums.</p>
+            </div>
+            <div class="price">
+              <strong>1280 Birr / year</strong>
+            </div>
+            <ul>
+              <li>Access to workout videos</li>
+              <li>Community forums</li>
+              <li>Basic progress tracking</li>
+            </ul>
+            <a href="#" class="basic-plan-btn">Get started</a>
+          </div>
+
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Pro Plan</h3>
+              <p>Personalized plans and unlimited coach messaging.</p>
+            </div>
+            <div class="price">
+              <strong>2399 Birr / year</strong>
+            </div>
+            <ul>
+              <li>Personalized workout plans</li>
+              <li>Meal guides</li>
+              <li>Unlimited coach messaging</li>
+            </ul>
+            <a href="#" class="pro-plan-btn">Get started</a>
+          </div>
+
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Elite Coaching</h3>
+              <p>1-on-1 virtual sessions and custom nutrition plans.</p>
+            </div>
+            <div class="price">
+              <strong>2999 Birr / year</strong>
+            </div>
+            <ul>
+              <li>1-on-1 virtual training sessions</li>
+              <li>Custom nutrition plans</li>
+              <li>Exclusive video content</li>
+            </ul>
+            <a href="#" class="elite-plan-btn">Get started</a>
+          </div>
         </div>
-        <div class="feature">
-          <h3>Nutrition Plans</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            excepturi tempora perspiciatis nisi autem obcaecati, dicta repellat
-            quidem delectus exercitationem voluptates saepe repellendus ad omnis
-            officiis laboriosam amet impedit necessitatibus.
-          </p>
-        </div>
-        <div class="feature">
-          <h3>Community Support</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
-            excepturi tempora perspiciatis nisi autem obcaecati, dicta repellat
-            quidem delectus exercitationem voluptates saepe repellendus ad omnis
-            officiis laboriosam amet impedit necessitatibus.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="pricing-plans">
-      <div class="price">
-        <div class="pricing-header">
-          <h3><b>Basic Plan</b></h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-            soluta.
-          </p>
-        </div>
-        <div class="price">
-          1280 <span class="currency">Birr</span>
-          <span class="duration">/ year</span>
-        </div>
-        <ul>
-          <li>Access to workout videos</li>
-          <li>Community forums</li>
-          <li>Basic progress tracking</li>
-        </ul>
-        <a href="#" class="cta-button">Get started</a>
-      </div>
-      <div class="price">
-        <div class="pricing-header">
-          <h3>Pro Plan</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-            soluta.
-          </p>
-        </div>
-        <div class="price">
-          2399 <span class="currency">Birr</span>
-          <span class="duration">/ year</span>
-        </div>
-        <ul>
-          <li>Personalized workout plans</li>
-          <li>Meal guides</li>
-          <li>Unlimited coach messaging</li>
-        </ul>
-        <a href="#" class="cta-button">Get started</a>
-      </div>
-      <div class="price">
-        <div class="pricing-header">
-          <h3>Elite Coaching</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro,
-            soluta.
-          </p>
-        </div>
-        <div class="price">
-          2999 <span class="currency">Birr</span>
-          <span class="duration">/ year</span>
-        </div>
-        <ul>
-          <li>1-on-1 virtual traning sessions</li>
-          <li>Custom nutrition plans</li>
-          <li>Exclusive video content</li>
-        </ul>
-        <a href="#" class="cta-button">Get started</a>
-      </div>
-    </section>
-    <footer>
+      </section>
+    </main>
+
+    <footer id="footer">
       <p>&copy; 2024 FitLife. All Rights Reserved.</p>
       <ul class="social-links">
-        <li><a href="##">Instagram</a></li>
-        <li><a href="##">Telegram</a></li>
-        <li><a href="##">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Telegram</a></li>
+        <li><a href="#">Twitter</a></li>
       </ul>
     </footer>
+
     <script src="main.js"></script>
   </body>
 </html>
